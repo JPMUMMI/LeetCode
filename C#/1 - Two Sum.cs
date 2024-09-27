@@ -3,7 +3,6 @@ public class Solution
     public int[] TwoSum(int[] nums, int target)
     {
         var indexMap = new Dictionary<int, int>(nums.Length);
-
         for (int i = 0; i < nums.Length; i++)
         {
             var currentNum = nums[i];
@@ -13,10 +12,8 @@ public class Solution
                 var index = indexMap[remainder];
                 return new int[] { index, i };
             }
-
             indexMap[currentNum] = i;
         }
-
         return default;
     }
 }
